@@ -12,3 +12,4 @@
 
 - Take note of how markdown works
 - Don't forget to fork first, dummy
+- Commit code often, push code at least once a week
