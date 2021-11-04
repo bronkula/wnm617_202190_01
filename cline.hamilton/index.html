@@ -13,6 +13,9 @@
    <script src="lib/js/jquery-2.2.4.min.js"></script>
 
    <script src="js/app.js"></script>
+   <script src="js/functions.js"></script>
+   <script src="js/pages.js"></script>
+   <script src="js/parts.js"></script>
    <script src="js/signin.js"></script>
 
    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
@@ -85,21 +88,7 @@
    <section data-role="page" id="page-list">
       <div data-role="main">
          <div class="overscroll floater fill-parent">
-            <ul class="animallist">
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-               <li class="animallist-item" data-template="#animallist-item-template"></li>
-            </ul>
+            <div class="animallist"></div>
          </div>
 
          <div class="floater bottom right">
@@ -110,12 +99,7 @@
    </section>
 
    <section data-role="page" id="page-user-profile">
-      <div data-role="main" class="overscroll">
-         USER!
-         <div>
-            <button class="form-button js-logout">Log Out</button>
-         </div>
-      </div>
+      <div data-role="main" class="overscroll"></div>
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
@@ -227,7 +211,7 @@
    <ul class="nav-icon-set">
       <li><a href="#page-recent" data-activateone=".nav-icon-set li:nth-child(1)">
          <span class="nav-icon"><img class="icon" src="img/icons/map.svg"></span>
-         <span class="nav-icon-label">Map</span>
+         <span class="nav-icon-label">Recent</span>
       </a></li>
       <li><a href="#page-list" data-activateone=".nav-icon-set li:nth-child(2)">
          <span class="nav-icon"><img class="icon" src="img/icons/list.svg"></span>
@@ -238,19 +222,6 @@
          <span class="nav-icon-label">Profile</span>
       </a></li>
    </ul>
-   </script>
-
-   <script type="text/template" id="animallist-item-template">
-   <a href="#page-animal-profile" class="display-flex">
-      <div class="flex-none animallist-item-image">
-         <img src="https://via.placeholder.com/400x400?text=Animal" alt="">
-      </div>
-      <div class="flex-stretch animallist-item-body padding-md">
-         <div class="animallist-item-name">Animal</div>
-         <div class="animallist-item-type"><strong>Type</strong> Animal</div>
-         <div class="animallist-item-breed"><strong>Breed</strong> Animal</div>
-      </div>
-   </a>
    </script>
    
 </body>
