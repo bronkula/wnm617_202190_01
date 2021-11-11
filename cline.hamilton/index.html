@@ -16,7 +16,13 @@
    <script src="js/functions.js"></script>
    <script src="js/pages.js"></script>
    <script src="js/parts.js"></script>
+   <script src="js/maps.js"></script>
    <script src="js/signin.js"></script>
+
+   <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxFlGCvrBiz53-c8WDpV4bryeCiEkdNdc"
+      async
+    ></script>
 
    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 </head>
@@ -73,11 +79,6 @@
       <div data-role="main">
          <div class="map"></div>
 
-
-         <div class="floater" style="top:20%;left:20%;">
-            <a href="#" data-activate="#recent-add-modal"><img src="img/icons/marker.svg" class="icon" style="width:30px;height:30px"></a>
-         </div>
-
          <div class="floater bottom right">
             <a href="#page-location-choose-animal" class="btn-circle">&plus;</a>
          </div>
@@ -120,11 +121,14 @@
          </div>
          <div class="animal-profile-bottom">
             <div class="map"></div>
+            <div class="description"></div>
          </div>
       </div>
       <header data-role="header" class="floating-header">
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#page-animal-edit">Edit</a></li>
          </ul>
       </header>
    </section>
@@ -151,6 +155,39 @@
                   <div class="form-control">
                      <label for="animal-add-breed" class="form-label">Breed</label>
                      <input type="text" id="animal-add-breed" class="form-input" data-role="none" placeholder="Name">
+                  </div>
+               </div>
+            </div>
+            <div class="flex-none padding-md">
+               <!-- <button type="submit" class="form-button">Save</button> -->
+               <a href="#page-list" class="form-button">Save</a>
+            </div>
+         </form>
+      </div>
+   </section>
+
+   <section data-role="page" id="page-animal-edit">
+      <header data-role="header">
+         <h1>Edit Animal!</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Cancel</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <form class="fill-parent display-flex flex-vertical" id="animal-edit-form" data-ajax="false">
+            <div class="flex-stretch position-relative">
+               <div class="fill-parent overscroll position-absolute padding-md">
+                  <div class="form-control">
+                     <label for="animal-edit-name" class="form-label">Name</label>
+                     <input type="text" id="animal-edit-name" class="form-input" data-role="none" placeholder="Name">
+                  </div>
+                  <div class="form-control">
+                     <label for="animal-edit-type" class="form-label">Type</label>
+                     <input type="text" id="animal-edit-type" class="form-input" data-role="none" placeholder="Name">
+                  </div>
+                  <div class="form-control">
+                     <label for="animal-edit-breed" class="form-label">Breed</label>
+                     <input type="text" id="animal-edit-breed" class="form-input" data-role="none" placeholder="Name">
                   </div>
                </div>
             </div>
