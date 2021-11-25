@@ -32,7 +32,7 @@
     user_id: '{{integer(1,10)}}',
     
     name: '{{company()}}',
-    
+
     type: '{{random("horse","dog","cat")}}',
     breed: function(tags) {
       var breeds = {
