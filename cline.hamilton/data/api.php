@@ -141,6 +141,7 @@ function makeStatement($data) {
 
          case "insert_user":
             $r = makeQuery($c,"SELECT id FROM `track_202190_users` WHERE `username`=? OR `email` = ?",[$p[0],$p[1]]);
+            if(isset($r['error'])) return $r;
             if(count($r['result'])) return ["error"=>"Username or Email already exists"];
 
             $r = makeQuery($c,"INSERT INTO
